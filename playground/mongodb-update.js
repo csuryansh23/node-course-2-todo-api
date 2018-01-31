@@ -21,16 +21,16 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp',(err,db)=>{
         returnOriginal: false
     }).then((result)=>{
         console.log(result);
-    });
+    });'
 */
 
     db.collection('Users').findOneAndUpdate({
-        name:'jen'
+        _id :new ObjectID('5a6d7c53aea81814a81bd1b6')
     }, {
         $set : {
-            name:'suryansh'
+            location: 'mahoba'
         },
-        $inc : {
+        $inc:{
             age:1
         }
     }, {
